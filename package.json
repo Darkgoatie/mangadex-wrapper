@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "doc": "jsdoc index.js"
+  },
+  "dependencies": {
+    "mangadex-full-api": "^5.12.1",
+    "mangakakalot-scrapper": "^0.0.3"
+  },
+  "devDependencies": {
+    "express": "^4.18.2"
+  }
+}
