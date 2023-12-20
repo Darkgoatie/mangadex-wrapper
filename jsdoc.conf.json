@@ -1,0 +1,23 @@
+{
+    "source": {
+      "include": ["./"],
+      "exclude": ["./node_modules", "./tests"]
+    },
+    "opts": {
+      "destination": "./docs",
+      "recurse": true
+    },
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true,
+      "default": {
+        "outputSourceFiles": true,
+        "includeDate": false
+      },
+      "systemName": "Mangadex simple api interaction module",
+      "navType": "vertical",
+      "theme": "docdash",
+      "footer": "Interact with mangadex api easily!"
+    }
+  }
+  

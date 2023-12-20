@@ -100,43 +100,128 @@ class Manga {
     });
     return pages;
   }
+
   /**
    * @constructor
-   * @param {Object} mangadata Raw data from API
+   * @param {Object} mangadata 
+   * Raw data from API
    */
   constructor(mangadata) {
     /**
-     * @type {String} Base api URL ("https://api.mangadex.org")
+     * @typedef {Object} LocalizedString     
+     * @property {String} language String by language code: "en", "ja" etc...
+     */
+
+    /**
+     * @typedef {Object} Relationship
+     * @property {String} id ID
+     * @property {String} type 
+     * @property {String} related Enum: "monochrome" "main_story" "adapted_from" "based_on" "prequel" "side_story" "doujinshi" "same_franchise" "shared_universe" "sequel" "spin_off" "alternate_story" "alternate_version" "preserialization" "colored" "serialization"
+     */
+
+    /**
+     * Base api URL ("https://api.mangadex.org")
+     * @type {String} 
      */
     this.baseURL = "https://api.mangadex.org";
     /**
-     * @type {String} Manga title
+     * Manga title for languages
+     * @type {LocalizedString}
      */
-    this.title = mangadata.attributes.title.en;
+    this.title = mangadata.attributes.title;
     /**
-     * @type {String} Manga api ID
+     * Manga api ID
+     * @type {String} 
      */
     this.id = mangadata.id;
     /**
-     * @type {String} Type of content: "manga/comic"
+     * Value: "manga"
+     * @type {String} 
      */
     this.type = mangadata.type;
     /**
-     * @type
+     * Manga demographic: shounen, seinen etc...
+     * @type {String} 
      */
     this.publicationDemographic;
-
-    this.description = mangadata.attributes.description.en;
+    /**
+     * Original language of manga: ja, en etc...
+     * @type {String} 
+     */
+    this.originalLanguage = mangadata.attributes.originalLanguage;
+    /**
+     * Manga description 
+     * @type {LocalizedString} 
+     */
+    this.description = mangadata.attributes.description;
+    /**
+     * Current manga status: "ongoing", "hiatus", "completed" or "canceled"
+     * @type {String} 
+     */
     this.status = mangadata.attributes.status;
+    /**
+     * Last released chapter of manga (Manga ID)
+     * @type {String}
+     */
+    this.latestUploadedChapter = mangadata.attributes.latestUploadedChapter;
+    /**
+     * Manga release year
+     * @type {Number}
+     */
+    this.year = mangadata.attributes.year;
+    /**
+     * Content rating of manga ("safe", "erotica", "suggestive" or "pornographic")
+     * @type {String}
+     */
+    this.contentRating = mangadata.attributes.contentRating;
+    /**
+     * State of manga ("draft", "submitted", "published", "rejected")
+     * @type {String}
+     */
+    this.state = mangadata.attributes.state 
+    /**
+     * Creation date
+     * @type {String}
+     */
+    this.createdAt = mangadata.attributes.createdAt
+    /**
+     * Update date
+     * @type {String}
+     */
+    this.updatedAt = mangadata.attributes.updatedAt
+    /**
+     * Version
+     * @type {Number} 
+     */
+    this.version =  mangadata.attributes.version
+    /**
+     * @typedef {Object} MangaTag 
+     * @property {String} id Tag ID
+     * @property {String} type Value = "tag"
+     * @property {TagAttributes} attributes Tag attributes
+     * @property {Relationship[]} relationships Relationships
+     */
+
+    /**
+     * @typedef {Object} TagAttributes
+     * @property {LocalizedString} name Name
+     * @property {LocalizedString} description Description
+     * @property {String} group "content", "format", "genre", "theme"
+     * @property {Number} version Integer >= 1
+     */
+    /**
+     * Tags
+     * @type {MangaTag[]}
+     */
+    this.tags =  mangadata.attributes.tags
   }
 }
 
-/** Chapter Object */
+/** 
+ * @class
+ * @description Chapter object
+ */
 class Chapter {
-  setMangaID(id) {
-    this.mangaID = id;
-  }
-
   async getPages() {
     const resp = await axios({
       method: "GET",
@@ -148,13 +233,17 @@ class Chapter {
     const hash = resp.data.chapter.hash;
     return pageids.map(l => baseURL + "/data/" + hash + "/" + l);
   }
-
-  /**
-   * @constructor
-   * @description Only construct this via MangaDex class!
-   */
+/**
+ * @constructor
+ * @param {Object} chapterdata Raw API chapter data
+ */
   constructor(chapterdata) {
+    /**
+     * Chapter api ID
+     * @type {String}
+     */
     this.id = chapterdata.id;
+    
     this.title = chapterdata.attributes.title;
     this.no = chapterdata.attributes.chapter;
     this.translatedLanguage = chapterdata.attributes.translatedLanguage;
@@ -167,10 +256,6 @@ const run = async () => {
   const md = new Mangadex();
   const manga = (await md.fetchManga({ title: "Jujutsu Kaisen" }))[0];
   console.log(manga);
-  const chapters = await manga.getChapters();
-  console.log(chapters.length);
-  fs.writeFileSync("pages.txt", (await chapters[15].getPages()).join("\n"));
-  fs.writeFileSync("chapters.txt", chapters.map(c => c.no).join("\n"));
 };
 
 run();

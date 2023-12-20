@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "doc": "jsdoc index.js"
+    "doc": "npx jsdoc ./index.js"
   },
   "dependencies": {
-    "mangadex-full-api": "^5.12.1",
-    "mangakakalot-scrapper": "^0.0.3"
+    "axios": "^1.6.2"
   },
   "devDependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "jsdoc": "^4.0.2"
   }
 }
