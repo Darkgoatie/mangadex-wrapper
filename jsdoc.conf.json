@@ -1,22 +1,20 @@
 {
   "source": {
-    "include": ["./src"],
-    "exclude": ["./node_modules", "./tests"]
+    "include": ["src", "src/structures", "src/structures/typedefs"],
+    "exclude": ["./node_modules", "./tests", "./.vscode"]
   },
   "opts": {
     "destination": "./docs",
-    "recurse": true
+    "template": "jsdoc-template"
   },
+  "plugins": ["plugins/markdown"],
   "templates": {
     "cleverLinks": true,
     "monospaceLinks": true,
-    "default": {
-      "outputSourceFiles": true,
-      "includeDate": false
-    },
-    "systemName": "Mangadex simple api interaction module",
-    "navType": "vertical",
-    "theme": "docdash",
-    "footer": "Interact with mangadex api easily!"
+    "useLongnameInNav": false,
+    "showInheritedInNav": true,
+    "referenceTitle": "@darkgoatie/Mangadex-api",
+    "disableSort": false,
+    "collapse": false
   }
 }

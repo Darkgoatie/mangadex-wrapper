@@ -1,4 +1,4 @@
 /node_modules/
 /docs/
 /package-lock.json
-/jsdoc.conf.json
+/jsdoc-template/
