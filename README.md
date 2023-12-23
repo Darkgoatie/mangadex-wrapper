@@ -13,7 +13,7 @@ Theoretically, you can report bugs in the [github repository](https://github.com
 - <a href="https://discord.gg/Vmfe56uMf6" target="_blank">Discord Server</a>
 - <a href="https://github.com/Darkgoatie/Mangadex-api" target="_blank">Github</a>
 - <a href="https://www.npmjs.com/package/@darkgoatie/mangadex-api" target="_blank">NPM</a>
-- <a href="https://darkgoatie.github.io/mangadex-wrapper/">Full Documentation</a>
+- <a href="https://darkgoatie.github.io/mangadex-wrapper/docs">Full Documentation</a>
 
 ## Examples
 
