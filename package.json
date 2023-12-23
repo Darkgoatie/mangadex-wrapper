@@ -1,6 +1,6 @@
 {
   "name": "mangadex-wrapper",
-  "version": "1.0.01",
+  "version": "1.0.02",
   "description": "Access to some Mangadex API endpoints. Supports mangadex api version 5.0.1",
   "keywords": [
     "mangadex",
