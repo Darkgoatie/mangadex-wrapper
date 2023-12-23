@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      typedefs/Queries.js - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      @darkgoatie/Mangadex-api
+    </h3>
+
+    
+
+    <h3>Classes</h3><ul><li id="Author-nav"><a href="Author.html">Author</a><ul class='methods'><li data-type="method" id="Author-getHumanURL-nav"><a href="Author.html#getHumanURL">getHumanURL</a></li><li data-type="method" id="Author-getMangas-nav"><a href="Author.html#getMangas">getMangas</a></li></ul></li><li id="Chapter-nav"><a href="Chapter.html">Chapter</a><ul class='methods'><li data-type="method" id="Chapter-getCoverArt-nav"><a href="Chapter.html#getCoverArt">getCoverArt</a></li><li data-type="method" id="Chapter-getHumanURL-nav"><a href="Chapter.html#getHumanURL">getHumanURL</a></li><li data-type="method" id="Chapter-getManga-nav"><a href="Chapter.html#getManga">getManga</a></li><li data-type="method" id="Chapter-getPages-nav"><a href="Chapter.html#getPages">getPages</a></li></ul></li><li id="CoverArt-nav"><a href="CoverArt.html">CoverArt</a><ul class='methods'><li data-type="method" id="CoverArt-getImageUrl-nav"><a href="CoverArt.html#getImageUrl">getImageUrl</a></li><li data-type="method" id="CoverArt-getManga-nav"><a href="CoverArt.html#getManga">getManga</a></li></ul></li><li id="Manga-nav"><a href="Manga.html">Manga</a><ul class='methods'><li data-type="method" id="Manga-aggregate-nav"><a href="Manga.html#aggregate">aggregate</a></li><li data-type="method" id="Manga-getArtist-nav"><a href="Manga.html#getArtist">getArtist</a></li><li data-type="method" id="Manga-getAuthor-nav"><a href="Manga.html#getAuthor">getAuthor</a></li><li data-type="method" id="Manga-getChapters-nav"><a href="Manga.html#getChapters">getChapters</a></li><li data-type="method" id="Manga-getCoverArt-nav"><a href="Manga.html#getCoverArt">getCoverArt</a></li><li data-type="method" id="Manga-getHumanURL-nav"><a href="Manga.html#getHumanURL">getHumanURL</a></li><li data-type="method" id="Manga-getMangaFeed-nav"><a href="Manga.html#getMangaFeed">getMangaFeed</a></li><li data-type="method" id="Manga-getTotalPages-nav"><a href="Manga.html#getTotalPages">getTotalPages</a></li></ul></li><li id="Mangadex-nav"><a href="Mangadex.html">Mangadex</a><ul class='methods'><li data-type="method" id="Mangadex-aggregateMangaByID-nav"><a href="Mangadex.html#aggregateMangaByID">aggregateMangaByID</a></li><li data-type="method" id="Mangadex-fetchAuthorByID-nav"><a href="Mangadex.html#fetchAuthorByID">fetchAuthorByID</a></li><li data-type="method" id="Mangadex-fetchAuthors-nav"><a href="Mangadex.html#fetchAuthors">fetchAuthors</a></li><li data-type="method" id="Mangadex-fetchChapterByID-nav"><a href="Mangadex.html#fetchChapterByID">fetchChapterByID</a></li><li data-type="method" id="Mangadex-fetchChapters-nav"><a href="Mangadex.html#fetchChapters">fetchChapters</a></li><li data-type="method" id="Mangadex-fetchCoverArtByID-nav"><a href="Mangadex.html#fetchCoverArtByID">fetchCoverArtByID</a></li><li data-type="method" id="Mangadex-fetchCoverArts-nav"><a href="Mangadex.html#fetchCoverArts">fetchCoverArts</a></li><li data-type="method" id="Mangadex-fetchManga-nav"><a href="Mangadex.html#fetchManga">fetchManga</a></li><li data-type="method" id="Mangadex-fetchMangaByID-nav"><a href="Mangadex.html#fetchMangaByID">fetchMangaByID</a></li></ul></li></ul><h3 id="global-nav"><a href="global.html">Global</a></h3>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        typedefs/Queries.js
+      </h1>
+    
+
+    
+      
+
+<section>
+  <article>
+    <pre class="prettyprint source linenums"><code>/**
+ * @global
+ * @typedef {Object} MangaOrderOptions
+ * @prop {("asc"|"desc")} [title]
+ * @prop {("asc"|"desc")} [year]
+ * @prop {("asc"|"desc")} [createdAt]
+ * @prop {("asc"|"desc")} [updatedAt]
+ * @prop {("asc"|"desc")} [latestUploadedChapter="desc"]
+ * @prop {("asc"|"desc")} [followedCount]
+ * @prop {("asc"|"desc")} [relevance]
+ */
+
+/**
+ * @global
+ * @typedef {Object} MangaQuery
+ * @prop {String} [title]
+ * @prop {String} [authorOrArtist] Author/Artist ID
+ * @prop {String[]} [authors]
+ * @prop {String[]} [artists]
+ * @prop {Number} [year]
+ * @prop {String[]} [includedTags]
+ * @prop {String} [includedTagsMode="AND"] Avaliale values: AND, OR
+ * @prop {String[]} [excludedTags]
+ * @prop {String} [excludedTagsMode="OR"] Avaliable values: AND, OR
+ * @prop {mangaStatus[]} [status] Avaliable values: "ongoing", "completed", "hiatus", "cancelled"
+ * @prop {String[]} [originalLanguage]
+ * @prop {String[]} [excludedOriginalLanguage]
+ * @prop {String[]} [availableTranslatedLanguage]
+ * @prop {publicationDemographic[]} [publicationDemographic]
+ * @prop {String[]} [ids] Manga ids (limited to 100 per request)
+ * @prop {contentRating[]} [contentRating=["safe", "suggestive", "erotica"]]
+ * @prop {String} [createdAtSince]
+ * @prop {String} [updatedAtSince]
+ * @prop {MangaOrderOptions} [order]
+ * @prop {String[]} [includes] Available values: "manga", "artist", "tag", "author", "creator", "cover_art"
+ * @prop {String} [hasAvaliableChapters] Available values: "0", "1", "true", "false"
+ * @prop {String} [group] Group ID
+ */
+
+/**
+ * @global
+ * @typedef {Object} MangaFeedQuery
+ * @prop {String[]} [translatedLanguage]
+ * @prop {String[]} [originalLanguage]
+ * @prop {String[]} [excludedOriginalLanguage]
+ * @prop {contentRating[]} [contentRating]
+ * @prop {String[]} [excludedGroups]
+ * @prop {String[]} [excludedUploaders]
+ * @prop {("1"|"0")} [includeFutureUpdates=1]
+ * @prop {String} [createdAtSince]
+ * @prop {String} [updatedAtSince]
+ * @prop {String} [publishAtSince]
+ * @prop {MangaOrderOptions} [order]
+ * @prop {String[]} [includes]
+ * @prop {(0|1)} [includeEmptyPages]
+ * @prop {(0|1)} [includeFuturePublishAt]
+ * @prop {(0|1)} [includeExternalUrl]
+ */
+
+/**
+ * @global
+ * @typedef {Object} MangaAggregateQuery
+ * @prop {LanguageCode[]} translatedLanguage
+ * @prop {String[]} groups Group UUIDs
+ */
+
+/**
+ * @global
+ * @typedef {Object} AggregatedVolume
+ * @prop {String} volume
+ * @prop {Number} count
+ * @prop {Object.&lt;String, AggregatedChapter>} chapters
+ * @example
+ * AggregatedVolume.chapters["1"] # Returns {AggregatedChapter} with code "1"
+ */
+
+/**
+ * @global
+ * @typedef {Object} AggregatedChapter
+ * @prop {String} chapter Chapter number
+ * @prop {String} id Chapter UUID
+ * @prop {String[]} others
+ * @prop {Number} count
+ */
+
+/**
+ * @global
+ * @typedef {Object} ChapterOrderOptions
+ * @prop {("asc"|"desc")} [createdAt="asc"]
+ * @prop {("asc"|"desc")} [updatedAt="asc"]
+ * @prop {("asc"|"desc")} [publishAt="asc"]
+ * @prop {("asc"|"desc")} [readableAt="asc"]
+ * @prop {("asc"|"desc")} [volume="asc"]
+ * @prop {("asc"|"desc")} [chapter="asc"]
+ */
+
+/**
+ * @global
+ * @typedef {Object} ChapterQuery
+ * @prop {String[]} ids Limited to 100
+ * @prop {String} [title]
+ * @prop {String[]} [groups]
+ * @prop {String[]} [uploader] Uploader UUIDs
+ * @prop {String} [manga] Manga UUID
+ * @prop {String[]|String} [volume]
+ * @prop {String[]} [chapter]
+ * @prop {String[]} [translatedLanguage]
+ * @prop {String[]} [originalLanguage]
+ * @prop {String[]} [excludedOriginalLanguage]
+ * @prop {contentRating[]} [contentRating=["safe","suggestive","erotica"]]
+ * @prop {String[]} [excludedGroups]
+ * @prop {String[]} [excludedUploaders]
+ * @prop {("1"|"0")} [includeFutureUpdates="1"]
+ * @prop {(1|0)} [includeEmptyPages]
+ * @prop {(1|0)} [includeFuturePublishAt]
+ * @prop {(1|0)} [includeExternalUrl]
+ * @prop {String} [createdAtSince]
+ * @prop {String} [updatedAtSince]
+ * @prop {String} [publishAtSince]
+ * @prop {ChapterOrderOptions} [order]
+ * @prop {String[]} [includes] Available values : manga, scanlation_group, user
+ */
+
+/**
+ * @global
+ * @typedef {Object} AuthorQuery
+ * @prop {String} [name] Author's name
+ * @prop {AuthorOrderOptions} [order] Order parameters
+ * @prop {String[]} [includes]
+ * @prop {String[]} [ids] Author ids (Limited to 100 per request)
+ */
+
+/**
+ * @global
+ * @typedef {Object} AuthorOrderOptions
+ * @prop {("asc"|"desc")} name
+ */
+
+/**
+ * @global
+ * @typedef {Object} CoverArtQuery
+ * @prop {String[]} manga Manga ids (limited to 100 per request)
+ * @prop {String[]} ids Covers ids (limited to 100 per request)
+ * @prop {String[]} uploaders User ids (limited to 100 per request)
+ * @prop {String[]} locales Locales of cover art (limited to 100 per request)
+ * @prop {CoverArtOrder} order
+ * @prop {String[]} includes
+ */
+
+/**
+ * @global
+ * @typedef {Object} CoverArtOrder
+ * @prop {"asc"|"desc"} createdAt
+ * @prop {"asc"|"desc"} updatedAt
+ * @prop {"asc"|"desc"} volume
+ */
+</code></pre>
+  </article>
+</section>
+
+    
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+
+</body>
+</html>
