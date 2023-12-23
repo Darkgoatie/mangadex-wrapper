@@ -1,6 +1,6 @@
 {
-  "name": "@darkgoatie/mangadex-api",
-  "version": "1.0.0",
+  "name": "mangadex-wrapper",
+  "version": "1.0.01",
   "description": "Access to some Mangadex API endpoints. Supports mangadex api version 5.0.1",
   "keywords": [
     "mangadex",
@@ -8,7 +8,7 @@
     "api module"
   ],
   "bugs": {
-    "url": "https://github.com/Darkgoatie/Mangadex-api/issues"
+    "url": "https://github.com/Darkgoatie/mangadex-wrapper/issues"
   },
   "license": "Apache-2.0",
   "scripts": {
@@ -31,5 +31,5 @@
     }
   ],
   "main": "./src/index.js",
-  "repository": "github:Darkgoatie/Mangadex-api"
+  "repository": "github:Darkgoatie/mangadex-wrapper"
 }

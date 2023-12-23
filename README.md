@@ -1,4 +1,4 @@
-# Documentation @darkgoatie/mangadex-api
+# Documentation for mangadex-wrapper (by @darkgoatie)
 
 ## Information
 
@@ -6,7 +6,7 @@ This module supports the "GET" endpoints for mangadex.org api. It doesn't requir
 
 ## Getting Help/Reporting Bugs
 
-Theoretically, you can report bugs in the [github repository](https://github.com/Darkgoatie/Mangadex-api). However I am more active in discord. Join the <a href="https://discord.gg/Vmfe56uMf6" target="_blank">discord support server</a> instead. (I promise, no useless pings/notifications!)
+Theoretically, you can report bugs in the [github repository](https://github.com/Darkgoatie/mangadex-wrapper). However I am more active in discord. Join the <a href="https://discord.gg/Vmfe56uMf6" target="_blank">discord support server</a> instead. (I promise, no useless pings/notifications!)
 
 ## Links
 
