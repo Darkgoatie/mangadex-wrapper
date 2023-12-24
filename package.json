@@ -1,6 +1,6 @@
 {
   "name": "mangadex-wrapper",
-  "version": "1.0.02",
+  "version": "1.0.1",
   "description": "Access to some Mangadex API endpoints. Supports mangadex api version 5.0.1",
   "keywords": [
     "mangadex",
@@ -15,7 +15,8 @@
     "doc": "jsdoc --configure jsdoc.conf.json -R README.md --verbose"
   },
   "dependencies": {
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "mangadex-wrapper": "^1.0.2"
   },
   "author": {
     "name": "Darkgoatie",

@@ -5,15 +5,19 @@
 class Mangadex {
   /**
    * @param {String} coverArtID CoverArt or Manga UUID
-   * @returns {Promise<CoverArt>}
+   * @returns {Promise<CoverArt> | null}
    */
   async fetchCoverArtByID(coverArtID) {
-    const offsetRequest = require("../functions/offsetRequest");
-    const CoverArt = require("./CoverArt");
-    const resp = await offsetRequest({
-      url: this.baseURL + "/cover/" + coverArtID,
-    });
-    return new CoverArt(resp);
+    try {
+      const offsetRequest = require("../functions/offsetRequest");
+      const CoverArt = require("./CoverArt");
+      const resp = await offsetRequest({
+        url: this.baseURL + "/cover/" + coverArtID,
+      });
+      return new CoverArt(resp);
+    } catch (e) {
+      return null
+    }
   }
 
   /**
@@ -34,15 +38,19 @@ class Mangadex {
 
   /**
    * @param {String} authorID
-   * @returns {Promise<Author>}
+   * @returns {Promise<Author> | null}
    */
   async fetchAuthorByID(authorID) {
-    const offsetRequest = require("../functions/offsetRequest");
-    const Author = require("./Author");
-    const resp = await offsetRequest({
-      url: this.baseURL + "/author/" + authorID,
-    });
-    return new Author(resp);
+    try {
+      const offsetRequest = require("../functions/offsetRequest");
+      const Author = require("./Author");
+      const resp = await offsetRequest({
+        url: this.baseURL + "/author/" + authorID,
+      });
+      return new Author(resp);
+    } catch (e) {
+      return null
+    }
   }
 
   /**
@@ -80,15 +88,19 @@ class Mangadex {
   /**
    *
    * @param {String} chapterID
-   * @returns {Promise<Chapter>}
+   * @returns {Promise<Chapter> | null}
    */
   async fetchChapterByID(chapterID) {
-    const offsetRequest = require("../functions/offsetRequest");
-    const Chapter = require("./Chapter");
-    const resp = await offsetRequest({
-      url: this.baseURL + "/chapter/" + chapterID,
-    });
-    return new Chapter(resp);
+    try {
+      const offsetRequest = require("../functions/offsetRequest");
+      const Chapter = require("./Chapter");
+      const resp = await offsetRequest({
+        url: this.baseURL + "/chapter/" + chapterID,
+      });
+      return new Chapter(resp);
+    } catch (e) {
+      return null
+    }
   }
 
   /**
@@ -110,30 +122,38 @@ class Mangadex {
 
   /**
    * @param {String} mangaId
-   * @returns {Promise<Manga>}
+   * @returns {Promise<Manga> | null}
    */
   async fetchMangaByID(mangaId) {
-    const offsetRequest = require("../functions/offsetRequest");
-    const Manga = require("./Manga");
-    const resp = await offsetRequest({
-      url: this.baseURL + "/manga/" + mangaId,
-    });
-    return new Manga(resp);
+    try {
+      const offsetRequest = require("../functions/offsetRequest");
+      const Manga = require("./Manga");
+      const resp = await offsetRequest({
+        url: this.baseURL + "/manga/" + mangaId,
+      });
+      return new Manga(resp);
+    } catch (e) {
+      return null
+    }
   }
 
   /**
    * @param {String} MangaID Manga UUID
    * @param {MangaAggregateQuery} Query
-   * @returns {Promise<Object.<String, AggregatedVolume>>}
+   * @returns {Promise<Object.<String, AggregatedVolume>> | null}
    */
   async aggregateMangaByID(MangaID, Query) {
-    const axios = require("axios");
-    const req = await axios({
-      method: "GET",
-      url: this.baseURL + "/manga/" + MangaID + "/aggregate",
-      params: { ...Query },
-    });
-    return req.data.volumes;
+    try {
+      const axios = require("axios");
+      const req = await axios({
+        method: "GET",
+        url: this.baseURL + "/manga/" + MangaID + "/aggregate",
+        params: {...Query},
+      });
+      return req.data.volumes;
+    } catch (e) {
+      return null
+    }
   }
 
   constructor() {
